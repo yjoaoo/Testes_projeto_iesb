@@ -1,3 +1,5 @@
+// Ele verifica se o token JWT enviado é válido antes de permitir o acesso a rotas protegidas.
+
 const { DataTypes } = require("sequelize")
 const sequelize = require("../config/db")
 

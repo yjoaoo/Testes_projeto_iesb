@@ -1,3 +1,5 @@
+// Ele verifica se o token JWT enviado é válido antes de permitir o acesso a rotas protegidas.
+
 const jwt = require("jsonwebtoken")
 
 module.exports = (req, res, next) => {

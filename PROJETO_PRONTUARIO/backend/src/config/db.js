@@ -1,4 +1,6 @@
-const { Sequelize } = require("sequelize"); 
+// Cria e exporta uma conexão com um banco de dados PostgreSQL usando o Sequelize.
+
+const { Sequelize } = require("sequelize"); // Sequelize é um ORM (Object-Relational Mapper).
 require("dotenv").config();
 
 const sequelize = new Sequelize(

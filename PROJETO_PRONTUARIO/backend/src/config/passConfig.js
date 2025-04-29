@@ -1,3 +1,5 @@
+// Configura o Passport.js para fazer autenticação de usuários usando o login do Google e Microsoft.
+
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const MicrosoftStrategy = require("passport-microsoft").Strategy;
