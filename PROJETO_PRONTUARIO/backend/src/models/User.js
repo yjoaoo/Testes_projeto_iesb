@@ -14,11 +14,11 @@ const User = sequelize.define("User", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {notEmpty: true, len: [2, 60]}
-    }
+    // name: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false,
+    //     validate: {notEmpty: true, len: [2, 60]}
+    // }
 })
 
 module.exports = User 

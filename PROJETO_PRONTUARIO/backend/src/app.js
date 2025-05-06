@@ -1,13 +1,13 @@
 const express = require("express")
 const routes = require("./router")
 const sequelize = require("./config/db")
-const passport = require("passport");
+// const passport = require("passport");
 require("./config/passConfig");
 require("dotenv").config()
 
 const app = express()
 
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 sequelize.authenticate().then(() => {
     console.log(" Conectado ao PostgreSQL  com sucesso!")

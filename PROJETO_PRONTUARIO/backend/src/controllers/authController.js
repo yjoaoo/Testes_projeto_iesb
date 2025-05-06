@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt")
 const User = require("../models/User")
-const { hashPassword, comparePassword} = require("../utils/hash")
+const { hashPassword, comparePassword, validatePassword } = require("../utils/hash")
 const jwt = require("jsonwebtoken")
 
 const login = async(req, res) => {
@@ -27,8 +27,11 @@ const login = async(req, res) => {
 const register = async (req, res) => {
     const { email, password} = req.body
 
-    const { valid, error } = passwordValidator(password)
-    if (!valid) return res.status(400).json({ message: "Senha fraca", checklist: error})
+    const { valid, error } = validatePassword(password)
+    if (!valid) {
+        console.log(error) 
+        return res.status(400).json({ message: "Senha fraca", checklist: error })
+    }
     
     try {
         const existingUser = await User.findOne({ where: { email }})
