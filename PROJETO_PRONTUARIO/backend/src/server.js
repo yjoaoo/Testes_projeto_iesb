@@ -1,9 +1,21 @@
-const sequelize = require("./config/db")
-const User = require("./models/User")
-require("dotenv").config()
+// const express = require("express");
+// const routes = require("./router");
+// const connectDB = require("./config/db");
+// require("dotenv").config();
 
-sequelize.sync({ force: false}).then(() => {
-    console.log("Tabelas sincronizadas com o banco de dados ")
-})
+// const app = express()
 
+// connectDB()
+
+
+// app.use(express.json())
+// app.use(routes)
+
+// const PORT = process.env.PORT || 3000
+// app.listen(PORT, () => {
+//     console.log(`Servidor rodando com sucesso na porta ${PORT}`)
+// })
+
+
+// module.exports = app 
 
